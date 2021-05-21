@@ -26,7 +26,7 @@ def initialize():
     stbrowser.get('https://selftrade.co.uk/login?')
     intial_window_handle = stbrowser.window_handles
     elem=stbrowser.find_element_by_id('login')
-    elem.send_keys("4246914")
+    elem.send_keys(PASSWORD)
     elem.send_keys(Keys.RETURN)
     sleep(5)
     new_window_handle = [x for x in stbrowser.window_handles if x != intial_window_handle[0]]
@@ -36,9 +36,9 @@ def initialize():
     stbrowser.switch_to.frame(stbrowser.find_element_by_name('comhome'))
     stbrowser.switch_to.frame(stbrowser.find_element_by_name('usecase'))
     stbrowser.find_element_by_name('loginid')
-    Select(stbrowser.find_element_by_name("dayOfBirth")).select_by_value('15')
-    Select(stbrowser.find_element_by_name("monthOfBirth")).select_by_value('4')
-    Select(stbrowser.find_element_by_name("yearOfBirth")).select_by_value('1985')
+    Select(stbrowser.find_element_by_name("dayOfBirth")).select_by_value(DAY)
+    Select(stbrowser.find_element_by_name("monthOfBirth")).select_by_value(MONTH)
+    Select(stbrowser.find_element_by_name("yearOfBirth")).select_by_value(YEAR)
     
     
     ## authenticate using keypad here ##
