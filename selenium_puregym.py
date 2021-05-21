@@ -94,9 +94,9 @@ class SeleniumPuregym(object):
             browser.get('http://www.puregym.com/members/bookings/')
             time.sleep(2)
             elem=browser.find_element_by_id('edit-email')
-            elem.send_keys("e.clewlow@gmail.com")
+            elem.send_keys(LOGIN_EMAIL)
             elem=browser.find_element_by_id('edit-pincode')
-            elem.send_keys("22160685" + Keys.RETURN)
+            elem.send_keys(PASSWORD + Keys.RETURN)
             time.sleep(5)
             
         except Exception:
